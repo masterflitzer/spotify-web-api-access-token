@@ -1,0 +1,17 @@
+{
+  "client_id": "",
+  "client_secret": "",
+  "redirect_uri": {
+    "scheme": "http",
+    "host": "localhost",
+    "port": 8080,
+    "path": "/callback"
+  },
+  "scope": [
+    "playlist-read-private",
+    "playlist-read-collaborative",
+    "user-read-email",
+    "user-read-private"
+  ],
+  "show_dialog": false
+}
