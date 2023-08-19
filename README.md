@@ -15,15 +15,14 @@
 ### Deno
 
 ```sh
-npm i
-deno run --allow-env --allow-net=localhost:8080,accounts.spotify.com,api.spotify.com --allow-read=. app.ts
+deno task start-deno
 ```
 
 ### NodeJS
 
 ```sh
 npm i
-tsc && node app.js
+npm run start-node
 ```
 
 ## Example of using the requested Access Token
