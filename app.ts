@@ -4,7 +4,7 @@ import * as querystring from "node:querystring";
 
 import config from "./config.json" assert { type: "json" };
 import Koa, { Context, Next } from "koa";
-import Router from "koa-router";
+import Router from "@koa/router";
 
 function generateRandomString(length: number): string {
     const characters =
