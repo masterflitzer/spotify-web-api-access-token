@@ -1,4 +1,6 @@
 *.js
+*.map
+*.d.ts
 /config.json
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows,deno,node
