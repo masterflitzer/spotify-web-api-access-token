@@ -60,19 +60,7 @@ const data: Data = {
 let code: string;
 let state: string;
 
-const app = new Koa();
 const router = new Router();
-
-app.use(async (ctx: Context, next: Next) => {
-    try {
-        await next();
-    } catch (error) {
-        console.error(error);
-        ctx.status = 500;
-        ctx.body = new Result(false, null, null);
-        return;
-    }
-});
 
 router.get("/", async (ctx: Context) => {
     const response = await fetch(
@@ -190,6 +178,19 @@ router.get("/refresh", async (ctx: Context) => {
     data.expires_in = result.expires_in;
 
     return ctx.redirect("/");
+});
+
+const app = new Koa();
+
+app.use(async (ctx: Context, next: Next) => {
+    try {
+        await next();
+    } catch (error) {
+        console.error(error);
+        ctx.status = 500;
+        ctx.body = new Result(false, null, null);
+        return;
+    }
 });
 
 app.use(router.routes());
