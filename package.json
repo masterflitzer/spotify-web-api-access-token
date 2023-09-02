@@ -6,7 +6,6 @@
     "start-node": "npx tsc -b && node app.js",
     "start-deno": "deno run --no-prompt --allow-env --allow-net=localhost:8080,accounts.spotify.com,api.spotify.com --allow-read=. app.ts"
   },
-  "license": "Apache-2.0",
   "type": "module",
   "private": true,
   "dependencies": {
